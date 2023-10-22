@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="technical.css">
+    <title>Technical Events</title>
+</head>
+<body>
+    <h1>Technical Events</h1>
+    <div class="event-container" id="ee">
+        <div class="event-box">
+            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjgxNmZyOXF2N2sxMmBncjNtdGxoY3p5NDdxZnM1OTIxNHZ1YXRhZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/HeeC6POE1NHmiualVZ/giphy.gif" alt="">
+            <div class="event-info" id="h">
+                <h2>Data Science Hackathon Event</h2>
+                <p>Topics:</p>
+                <p>1. Adaptive Learning Platform <br> 2. Early Intervention for Student Success <br>3. Language Learning Assistance</p>
+                <button class="reg" onclick="setEventName('hackathon'); window.location.href='payment.html?selectedEvent=hackathon'">Register now</button>
+            </div>
+        </div>
+        <div class="event-box">
+            <img src="ctf.gif" alt="" >
+            <div class="event-info" id="cf">
+                <h2>CTF</h2>
+                <p>Dive into the world of cybersecurity and test your hacking skills in our Capture The Flag competition. Uncover vulnerabilities, crack codes, and protect your digital fortress. Prove your mettle in the ultimate battle of wits.</p>
+                <button class="reg" onclick="setEventName('ctf'); window.location.href='payment.html?selectedEvent=ctf'">Register now</button>
+            </div>
+        </div>
+        <div class="event-box">
+            <img src="https://i.gifer.com/origin/a4/a4402398400ad9d3b138194e83953f58_w200.gif" alt="" class="g">
+            <div class="event-info" id="cc">
+                <h3>Coding Competition</h3>
+                <p>Calling all coding wizards! Compete in our coding challenge and let your algorithms shine. Solve intricate problems, optimize your code, and prove you're the coding champ. Are you up for the challenge?</p><br>
+                <button class="reg" onclick="setEventName('Coding Competition'); window.location.href='payment.html?selectedEvent=Coding%20Competition'">Register now</button>
+            </div>
+        </div>
+        <div class="event-box">
+            <img src="https://media.tenor.com/WXtfq7oPTC8AAAAC/gamers156-gamers.gif" alt="" class="h">
+            <div class="event-info" id="gt">
+                <h4>Gaming Tournament</h4>
+                <p>Level up your gaming skills and take on the competition in our Gaming Tournament. Compete, conquer, and claim the title of gaming champion of the college!<br>Games: Valorant, COD, BGMI(mobile)</p>
+                <button class="reg" onclick="setEventName('Gaming Tournament'); window.location.href='payment.html?selectedEvent=Gaming%20Tournament'">Register now</button> <br>
+                <p class="t">t</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function setEventName(eventName) {
+            selectedEvent = eventName;
+        }
+    </script>
+</body>
+</html>

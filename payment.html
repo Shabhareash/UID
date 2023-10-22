@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="payment.css">
+    <title>Payment Form</title>
+</head>
+<body>
+    <div class="container">
+        <form class="payment-form" action="qr.html" method="get">
+            <h1>Payment</h1>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="event-type">Event</label>
+                <select name="event-type" id="event" required>
+                    <option value="ctf">CTF</option>
+                    <option value="hackathon">Hackathon</option>
+                    <option value="Coding Competition">Coding Competition</option>
+                    <option value="gamingTournament">Gaming Tournament</option>
+                    <option value="dancing-competition">Dancing Competition</option>
+                    <option value="singing-competition">Singing Competition</option>
+                    <option value="selfie-competition">Selfie Competition</option>
+                    <option value="t-shirt-painting-competition">T-shirt Painting Competition</option>
+                </select>
+            </div>
+            <div class="form-group" id="group-size-container">
+                <label for="group-size">Group Size</label>
+                <input type="number" id="group-size" name="group-size" min="1" max="5" onkeydown="return false">
+            </div>
+            <div class="form-group">
+                <label for="payment">Payment Amount</label>
+                <input type="number" id="payment" name="payment" required readonly>
+            </div>
+            <input type="submit" class="l" id="payButton" value="Pay Now">
+        </form>
+    </div>
+    <script src="payment.js"></script>
+    <script>
+        const torch = document.createElement('div');
+torch.classList.add('torch');
+document.body.appendChild(torch);
+
+document.addEventListener('mousemove', (e) => {
+    torch.style.left = e.clientX + 'px';
+    torch.style.top = e.clientY + 'px';
+});
+
+torch.addEventListener('mouseenter', () => {
+    torch.style.width = '150px';
+    torch.style.height = '150px';
+});
+
+torch.addEventListener('mouseleave', () => {
+    torch.style.width = '100px';
+    torch.style.height = '100px';
+});
+
+    </script>
+</body>
+</html>

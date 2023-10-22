@@ -1,0 +1,91 @@
+@import url(https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Space Grotesk;
+    background-color: black;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #292929;
+    border-radius: 10px;
+    padding: 30px; /* Increased padding */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffa500;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    color: #ffa500;
+}
+
+input[type="text"],
+input[type="email"], 
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ffa500;
+    border-radius: 5px;
+    background-color: #292929;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+button {
+    background-color: #ffa500;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff9900;
+}
+#mouse-follower {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ffa500; /* Orange color, you can change this */
+    border-radius: 50%; /* Make it round */
+    pointer-events: none; /* Ensure it doesn't interfere with clicks */
+    transform: translate(-50%, -50%); /* Center the element on the cursor */
+    transition: transform 0.2s ease; /* Add a smooth transition */
+}

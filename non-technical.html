@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="non-technical.css">
+    <title>Non-Technical Events</title>
+</head>
+<body>
+    <h1>Non-Technical Events</h1>
+    <div class="event-container">
+        <div class="event-box" id="dancing">
+            <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzRzaTYxcjIxeHQ4M3ZzZ20wNzUwMW82Z3lmbHdtcDMxdjdmeDR3MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JYrQVSYGMMDr0V6bvt/giphy.gif" alt="" class="g">
+            <div class="event-info">
+                <h2>Dancing Competition</h2>
+                <p>Showcase your dance moves and groove to the rhythm in our Dancing Competition. From hip-hop to ballet, all styles are welcome. Let your passion for dance shine on our stage and captivate the audience!</p>
+                <button class="reg" onclick="setEventName('dancing-competition'); window.location.href='payment.html?selectedEvent=dancing-competition'">Register now</button>
+            </div>
+        </div>
+        
+        <div class="event-box" id="singing">
+            <img src="https://i.gifer.com/D7q0.gif" alt="" class="j">
+            <div class="event-info">
+                <h2>Singing Contest</h2>
+                <p>Belt out your favorite tunes and prove you've got the voice of a star in our Singing Competition. Whether you sing pop, rock, or soul, your vocal talents deserve the spotlight. Get ready to hit those high notes and leave the audience spellbound.</p>
+                <button class="reg" onclick="setEventName('singing-competition'); window.location.href='payment.html?selectedEvent=singing-competition'">Register now</button>
+            </div>
+        </div>
+        <div class="event-box" id="selfie">
+            <img src="https://i.pinimg.com/originals/e6/eb/97/e6eb975de8408be00f05a8e87d23881e.gif" alt="" class="h">
+            <div class="event-info">
+                <h2>Selfie Competition</h2>
+                <p>Strike a pose and show off your selfie game in our Selfie Competition. Capture your best moments, get creative with filters, and share your selfies with the world. Let's see who can take the most memorable selfie!</p>
+                <button class="reg" onclick="setEventName('selfie-competition'); window.location.href='payment.html?selectedEvent=selfie-competition'">Register now</button>
+            </div>
+        </div>
+        <div class="event-box" id="painting">
+            <img src="https://media.baamboozle.com/uploads/images/580946/1648640009_42734_gif-url.gif" alt="" class="i">
+            <div class="event-info">
+                <h2>T-shirt Painting</h2>
+                <p>Unleash your artistic talent in our T-Shirt Painting Competition. Grab your brushes, unleash your creativity, and transform a plain t-shirt into a work of art. Express yourself through colors and designs, and stand a chance to win big!</p>
+                <button class="reg" onclick="setEventName('t-shirt-painting-competition'); window.location.href='payment.html?selectedEvent=t-shirt-painting-competition'">Register now</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function setEventName(eventName) {
+            selectedEvent = eventName;
+        }
+    </script>
+</body>
+</html>

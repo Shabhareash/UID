@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="charity.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity Fund</title>
+</head>
+<body>
+    <div id="main-container">
+        <h1>Charity Fund Calculator</h1>
+        <p>Enter an amount in rupees to see how many meals can be provided:</p>
+        <form>
+            <input type="number" id="donationAmount" placeholder="Enter amount in rupees">
+            <button type="button" onclick="calculateMeals()">Calculate</button>
+
+        </form>
+        <p id="result"></p>
+        <button onclick="redirectToPaymentPage()" class="button" style="background-color: lightgreen;">Donate</button>
+    </div>
+    <script src="charity.js"></script>
+    <div id="mouse-follower"></div> 
+        <img src="dot.png" alt="">
+        <script src="mouse-animation.js"></script><br>
+</body>
+</html>
