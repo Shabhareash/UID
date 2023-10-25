@@ -24,11 +24,7 @@
                     <option value="ctf">CTF</option>
                     <option value="hackathon">Hackathon</option>
                     <option value="Coding Competition">Coding Competition</option>
-                    <option value="gamingTournament">Gaming Tournament</option>
-                    <option value="dancing-competition">Dancing Competition</option>
-                    <option value="singing-competition">Singing Competition</option>
-                    <option value="selfie-competition">Selfie Competition</option>
-                    <option value="t-shirt-painting-competition">T-shirt Painting Competition</option>
+                    <!-- Add more event options here -->
                 </select>
             </div>
             <div class="form-group" id="group-size-container">
@@ -44,25 +40,46 @@
     </div>
     <script src="payment.js"></script>
     <script>
-        const torch = document.createElement('div');
-torch.classList.add('torch');
-document.body.appendChild(torch);
+        document.addEventListener('DOMContentLoaded', () => {
+            const eventSelect = document.getElementById('event');
+            const groupSizeContainer = document.getElementById('group-size-container');
+            const paymentInput = document.getElementById('payment');
 
-document.addEventListener('mousemove', (e) => {
-    torch.style.left = e.clientX + 'px';
-    torch.style.top = e.clientY + 'px';
-});
+           
+            function getQueryParam(name) {
+                const urlSearchParams = new URLSearchParams(window.location.search);
+                return urlSearchParams.get(name);
+            }
 
-torch.addEventListener('mouseenter', () => {
-    torch.style.width = '150px';
-    torch.style.height = '150px';
-});
+            const selectedEvent = getQueryParam('selectedEvent');
 
-torch.addEventListener('mouseleave', () => {
-    torch.style.width = '100px';
-    torch.style.height = '100px';
-});
 
+            const eventPayments = {
+                'ctf': 250,
+                'hackathon': 350,
+                'Coding Competition': 250,
+
+            };
+
+    
+            eventSelect.value = selectedEvent;
+
+            if (eventPayments.hasOwnProperty(selectedEvent)) {
+                paymentInput.value = eventPayments[selectedEvent];
+            } else {
+                paymentInput.value = 0;
+            }
+
+           
+            const groupCompetitions = ['ctf', 'hackathon', 'Coding Competition'];
+
+            
+            if (groupCompetitions.includes(selectedEvent)) {
+                groupSizeContainer.style.display = 'block';
+            } else {
+                groupSizeContainer.style.display = 'none';
+            }
+        });
     </script>
 </body>
 </html>
